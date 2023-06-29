@@ -47,44 +47,44 @@
           </li> --}}
           <li class="nav-header">DASHBOARD</li>
           @if (auth()->check() && auth()->user()->role->role=='admin')
-          <li class="nav-item">
-            <!-- <a href="{{('slider.index')}}" class="nav-link active">
+          <!-- <li class="nav-item">
+            <a href="{{('slider.index')}}" class="nav-link active">
               <i class="nav-icon fa-solid fa-images"></i>
               <p>
                 Slider
                 <span class="badge badge-info right"></span>
               </p>
-            </a> -->
-          </li>
+            </a>
+          </li> -->
           <li class="nav-item">
             <a href="#" class="nav-link ">
-              <i class="nav-icon fa-solid fa-gift"></i>
+              <i class="nav-icon fas fa-gifts"></i>
               <p>
                 Product
-                <i class="right fa-solid fa-angle-left"></i>
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{(product-item.index)}}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Product Items</p>
                 </a>
               </li>
               <li class="nav-item">
-                <!-- <a href="{{('product-size.index')}}" class="nav-link">
+                <a href="{{('product-size')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Product Sizes</p>
-                </a> -->
+                </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
             <a href="#/admin/pending-vendors" class="nav-link ">
-              <i class="nav-icon fa-solid fa-users"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Vendors
-                <i class="right fa-solid fa-angle-left"></i>
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">

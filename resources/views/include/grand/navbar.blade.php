@@ -50,7 +50,7 @@
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item dropdown d-flex align-self-center me-2">
         <a href="#" class="position-relative">
-          <i class="fa-solid fa-cart-plus"></i>
+          <i class="fas fa-cart-plus"></i>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             2
             <span class="visually-hidden">Cart</span>

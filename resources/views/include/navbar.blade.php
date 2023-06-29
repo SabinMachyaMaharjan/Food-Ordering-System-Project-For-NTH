@@ -45,7 +45,7 @@
                         @else
                         <li class="nav-item dropdown d-flex align-self-center me-2">
                             <a href="#" class="position-relative">
-                              <i class="fa-solid fa-cart-plus"></i>
+                              <i class="fas fa-cart-plus"></i>
                               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 99+
                                 <span class="visually-hidden">Cart</span>
@@ -64,16 +64,33 @@
                                         </a>
                                     @elseif (auth()->user()->role->role=='vendor')  
                                         <a class="dropdown-item" href="{{ route('vendor.dashboard') }}"> 
-                                                Dashboard
+                                            Dashboard
                                         </a>  
                                     @endif
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                    @auth
 
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item image" href="/admin/dashboard"  
+                                        style="justify-content:start;"><i class="fas fa-home"
+                                            style="margin-right: 10px;
+                    margin-left: -4px;"></i><span>Dashboard</span></a>
+                                </li>    
+                                <li><a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a></li>
+<li>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
-                                    </form>
+                                        <button class="btn  logout__form dropdown-item" type="submit"><i
+                                                class="fas fa-sign-out-alt mr-2" style="margin-right: 10px;"></i><span
+                                                style="font-weight: 500!important;">Logout</span></button>
+                                    </form></li>
+                                </ul>
+                            </li>
+                            @endauth
+                                   
                                 </div>
                             </li>
                         @endguest

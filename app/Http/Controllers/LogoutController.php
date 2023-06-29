@@ -11,7 +11,7 @@ class LogoutController extends Controller
     /**
      * Log out account user.
      *
-     * @return \Illuminate\Routing\Redirector
+     * @return \Illuminate\Routing\Redirector                       
      */
     public function perform()
     {
@@ -19,6 +19,6 @@ class LogoutController extends Controller
         
         Auth::logout();
 
-        return redirect('login');
+        return redirect('auth.login');
     }
 }

@@ -7,7 +7,7 @@
             <h1 class="m-0">{{array_key_last($breadcrumb)}}</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
+            <ol class="breadcrumb">
               @foreach ($breadcrumb as $key => $value)
                 <li class="breadcrumb-item">
                   <a href="{{$value}}">{{$key}}</a>
